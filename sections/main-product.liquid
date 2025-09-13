@@ -734,7 +734,7 @@
     -%}
 
     <script type="application/ld+json">
-      {{ product | structured_data }}
+      {% comment %}Start Bsscommerce HPOGS{% endcomment %}{% capture bss_lock_check %}{% render 'bss-lock-condition', scope: 'subject', subject: product, subject_parent: product, variable: 'hpogg' %}{% endcapture %}{% capture product_schema %}{{ product | structured_data }}{% endcapture %}{% render 'bss-lock-hpogs', product: product, product_schema: product_schema, bss_lock_check: bss_lock_check %}{% comment %}End Bsscommerce HPOGS{% endcomment %}
     </script>
   </div>
 </product-info>
