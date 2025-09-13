@@ -1,0 +1,31 @@
+// =============================================================================
+// Lucyd Custom Styles - Main Stylesheet
+// =============================================================================
+
+// Import existing custom styles
+@import './media-queries.scss';
+
+// Import custom sections (with project-specific prefix)
+@import './sections/lucyd-faqs.scss';
+
+// Import custom snippets (with project-specific prefix)
+@import './snippets/lucyd-product-card.scss';
+
+// Import component library
+@import './components/index.scss';
+
+// Import vendor styles
+@import './frontend-vendor.scss';
+
+// Import templates
+@import './templates/products.scss';
+
+// Add your custom styles here
+// All new sections and snippets should use your project-specific prefix
+// Examples: lucyd-product-card, brand-hero-banner, client-navbar, etc.
+//
+// Consistent Naming Structure:
+// - Liquid files: lucyd-faqs.liquid
+// - SCSS files: lucyd-faqs.scss  
+// - JavaScript files: lucyd-faqs.js
+// This makes it easy to find all related files for a component.
