@@ -94,7 +94,7 @@
           >
             {%- assign product_form_id = 'product-form-' | append: section.id -%}
 
-            {%- for block in section.blocks -%}
+            {%- for block in section.blocks -%}{% comment %}start BSS Commerce Hide Price{% endcomment %}{% capture bss_lock_check %}{% render 'bss-lock-condition', scope: 'subject', subject: block, variable: 'transparent' %}{% endcapture %}{% if bss_lock_check contains 'true' %}{% render 'bss-hide-product-design', section: 'sections/featured-product.liquid', subject: block %}{% continue %}{% endif %}{% comment %}end BSS Commerce Hide Price{% endcomment %}
               {%- case block.type -%}
                 {%- when '@app' -%}
                   {% render block %}
