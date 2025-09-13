@@ -34,3 +34,12 @@
   .dummy-btn:hover {
     background: #0284c7;
   }
+  .dummy-msg {
+    display: none;
+    margin-top: 16px;
+    font-weight: bold;
+    color: #0ea5e9;
+  }
+  .dummy-msg.is-visible {
+    display: block;
+  }
