@@ -68,7 +68,7 @@
             <div class="col-md-9">
                 <div class="row">
 
-                    {% for product in collection.products %}
+                    {% for product in collection.products %}{% comment %}start BSS Commerce Hide Price{% endcomment %}{% capture bss_lock_check %}{% render 'bss-lock-condition', scope: 'subject', subject: product, variable: 'transparent' %}{% endcapture %}{% if bss_lock_check contains 'true' %}{% render 'bss-hide-product-design', section: 'sections/lucyd-collection-template.liquid', subject: product %}{% continue %}{% endif %}{% comment %}end BSS Commerce Hide Price{% endcomment %}
                       <div class="col-md-4">
                         <div class="product-item">
 
