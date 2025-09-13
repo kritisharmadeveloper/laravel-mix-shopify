@@ -9,6 +9,32 @@
  */
 {
   "sections": {
+    "175775758414c71793": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_27229d4_HEAKHG": {
+          "type": "ai_gen_block_27229d4",
+          "settings": {
+            "heading_text": "Glowing Heading",
+            "heading_tag": "h2",
+            "text_alignment": "center",
+            "font_size": 48,
+            "font_weight": "600",
+            "padding": 20,
+            "text_color": "#ffffff",
+            "glow_color": "#00ffff",
+            "glow_size": 10,
+            "animation_speed": 2,
+            "enable_hover_effect": true
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_27229d4_HEAKHG"
+      ],
+      "settings": {}
+    },
     "main": {
       "type": "main-page",
       "settings": {
@@ -26,6 +52,7 @@
     }
   },
   "order": [
+    "175775758414c71793",
     "main",
     "xite_new_page_FP3QEc"
   ]
