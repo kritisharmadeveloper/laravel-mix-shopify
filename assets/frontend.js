@@ -353,14 +353,14 @@ var LucydDummy = /*#__PURE__*/function () {
       });
     }
   }]);
-}(); // Normal page init
+}(); // Initialize for live site
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".dummy-section").forEach(function (section) {
     new LucydDummy(section);
   });
 });
 
-// Shopify Theme Editor support
+// Initialize for Shopify customizer
 if (window.Shopify && window.Shopify.designMode) {
   document.addEventListener("shopify:section:load", function (event) {
     if (event.target && event.target.classList.contains("dummy-section")) {
@@ -368,6 +368,7 @@ if (window.Shopify && window.Shopify.designMode) {
     }
   });
 }
+new LucydDummy();
 
 /***/ }),
 
