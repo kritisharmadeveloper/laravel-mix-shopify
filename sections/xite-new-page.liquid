@@ -23,7 +23,7 @@
 }
 {% endschema %}
 
-<section class="dummy-section">
+<section class="dummy-section" id="section-{{ section.id }}">
   <div class="dummy-wrapper">
     <h1>{{ section.settings.heading }}</h1>
     <p>{{ section.settings.subtext }}</p>
@@ -34,7 +34,7 @@
       <div class="dummy-card">Card 3</div>
     </div>
 
-    <button class="dummy-btn" id="dummy-btn">Click Me</button>
-    <p id="dummy-msg" style="display:none;">🎉 Button Clicked!</p>
+    <button class="dummy-btn">Click Me</button>
+    <p class="dummy-msg">🎉 Button Clicked!</p>
   </div>
 </section>
