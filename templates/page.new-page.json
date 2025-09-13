@@ -15,9 +15,18 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "xite_new_page_FP3QEc": {
+      "type": "xite-new-page",
+      "name": "Dummy Full Page Section",
+      "settings": {
+        "heading": "This is a Dummy Section",
+        "subtext": "Add some dummy content here to test layout, styles, and scripts."
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "xite_new_page_FP3QEc"
   ]
 }
