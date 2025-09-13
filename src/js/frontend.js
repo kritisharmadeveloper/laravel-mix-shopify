@@ -22,6 +22,7 @@ window.Noty = Noty;
 // Sections
 import './sections/lucyd-header.js';
 import './sections/lucyd-faqs.js';
+import './sections/xite-new-page.js';
 
 // Snippets
 import './snippets/lucyd-product-card.js';

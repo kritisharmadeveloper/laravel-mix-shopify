@@ -202,10 +202,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sections_lucyd_header_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_sections_lucyd_header_js__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _sections_lucyd_faqs_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./sections/lucyd-faqs.js */ "./src/js/sections/lucyd-faqs.js");
 /* harmony import */ var _sections_lucyd_faqs_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_sections_lucyd_faqs_js__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _snippets_lucyd_product_card_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./snippets/lucyd-product-card.js */ "./src/js/snippets/lucyd-product-card.js");
-/* harmony import */ var _templates_product_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./templates/product.js */ "./src/js/templates/product.js");
-/* harmony import */ var _templates_product_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_templates_product_js__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _components_LucydModal__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/LucydModal */ "./src/js/components/LucydModal.ts");
+/* harmony import */ var _sections_xite_new_page_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./sections/xite-new-page.js */ "./src/js/sections/xite-new-page.js");
+/* harmony import */ var _sections_xite_new_page_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_sections_xite_new_page_js__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _snippets_lucyd_product_card_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./snippets/lucyd-product-card.js */ "./src/js/snippets/lucyd-product-card.js");
+/* harmony import */ var _templates_product_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./templates/product.js */ "./src/js/templates/product.js");
+/* harmony import */ var _templates_product_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_templates_product_js__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _components_LucydModal__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/LucydModal */ "./src/js/components/LucydModal.ts");
 // =============================================================================
 // Frontend JavaScript - TypeScript Entry Point
 // =============================================================================
@@ -224,6 +226,7 @@ window.Noty = (noty__WEBPACK_IMPORTED_MODULE_4___default());
 // Sections
 
 
+
 // Snippets
 
 // Templates
@@ -236,7 +239,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var modalContainers = document.querySelectorAll('[data-lucyd-modal]');
   modalContainers.forEach(function (container) {
     if (container instanceof HTMLElement) {
-      (0,_components_LucydModal__WEBPACK_IMPORTED_MODULE_9__.createLucydModal)(container, {
+      (0,_components_LucydModal__WEBPACK_IMPORTED_MODULE_10__.createLucydModal)(container, {
         triggerSelector: '[data-modal-trigger]',
         modalSelector: '[data-modal]',
         closeSelector: '[data-modal-close]',
@@ -313,6 +316,58 @@ var LucydHeader = /*#__PURE__*/function () {
   }]);
 }(); // Initialize when the script loads
 new LucydHeader();
+
+/***/ }),
+
+/***/ "./src/js/sections/xite-new-page.js":
+/*!******************************************!*\
+  !*** ./src/js/sections/xite-new-page.js ***!
+  \******************************************/
+/***/ (() => {
+
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
+function _defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o); } }
+function _createClass(e, r, t) { return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, "prototype", { writable: !1 }), e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+var LucydDummy = /*#__PURE__*/function () {
+  function LucydDummy(container) {
+    _classCallCheck(this, LucydDummy);
+    this.container = container;
+    if (this.container) {
+      this.init();
+    }
+  }
+  return _createClass(LucydDummy, [{
+    key: "init",
+    value: function init() {
+      this.buttons = this.container.querySelectorAll(".dummy-btn");
+      this.buttons.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var msg = btn.closest(".dummy-wrapper").querySelector(".dummy-msg");
+          if (msg) {
+            msg.classList.toggle("is-visible");
+          }
+        });
+      });
+    }
+  }]);
+}(); // Normal page init
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".dummy-section").forEach(function (section) {
+    new LucydDummy(section);
+  });
+});
+
+// Shopify Theme Editor support
+if (window.Shopify && window.Shopify.designMode) {
+  document.addEventListener("shopify:section:load", function (event) {
+    if (event.target && event.target.classList.contains("dummy-section")) {
+      new LucydDummy(event.target);
+    }
+  });
+}
 
 /***/ }),
 
